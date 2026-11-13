@@ -23,6 +23,17 @@ describe('Ich kaufe Kaffee', () => {
 
         assert.equal(result.change, 0)
     })
+    it('Der Automat frisst das Geld, der blöde Sack', () => {
+        const drink = 'espresso'
+        const coins = 150
+        const weekday = 'tuesday'
+        const random = 0.09
+
+        const result = buyCoffee({ drink, coins, weekday, random })
+
+        assert.equal(result.change, 0)
+        assert.equal(result.drink, null)
+    })
     it('Espresso am Montag', () => {
         const drink = 'espresso'
         const coins = 300
