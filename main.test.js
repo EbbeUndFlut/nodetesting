@@ -13,6 +13,16 @@ describe('Ich kaufe Kaffee', () => {
 
         assert.equal(result.change, 150)
     })
+    it('Espresso am Dienstag und passend', () => {
+        const drink = 'espresso'
+        const coins = 150
+        const weekday = 'tuesday'
+        const random = 1
+
+        const result = buyCoffee({ drink, coins, weekday, random })
+
+        assert.equal(result.change, 0)
+    })
     it('Espresso am Montag', () => {
         const drink = 'espresso'
         const coins = 300
